@@ -34,7 +34,7 @@ def is_first_tuple_at_least_as_good(my_tuple: Tuple, other_tuple: Tuple) -> bool
 def init_hasse(freqs: Dict[str, Tuple], make_edges: bool) -> nx.DiGraph:
     tuple_players_map = {}
     for player, player_tuple in freqs.items():
-        if player not in tuple_players_map:
+        if player_tuple not in tuple_players_map:
             tuple_players_map[player_tuple] = []
         tuple_players_map[player_tuple].append(player)
     graph = nx.DiGraph()
